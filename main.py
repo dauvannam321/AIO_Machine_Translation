@@ -10,7 +10,7 @@ class BaseConfig:
 
 class NMTConfig(BaseConfig):
     # Dataset
-    data_dir = 'data'
+    data_dir = 'vi_en/data'
     src_lang = 'vi'
     tgt_lang = 'en'
 
@@ -39,7 +39,7 @@ class NMTConfig(BaseConfig):
     batch_size = 64
     seq_len = 150
     num_epochs = 1
-    ckpt_dir = './'
+    ckpt_dir = './vi_en'
     ckpt_name = 'best_ckpt.tar'
 
 cfg = NMTConfig()
