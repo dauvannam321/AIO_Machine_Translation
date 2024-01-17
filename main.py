@@ -44,4 +44,4 @@ class NMTConfig(BaseConfig):
 
 cfg = NMTConfig()
 trainer = Trainer(cfg, is_train=False, load_ckpt=False)
-trainer.inference('Xin chào.')
+trainer.inference('Tôi yêu bạn.')
