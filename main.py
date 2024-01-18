@@ -1,5 +1,14 @@
 import torch
+import numpy as np
+import datasets
+import sentencepiece as spm
 from Trainer import Trainer
+
+print(f'numpy version: {np.__version__}')
+print(f'datasets version: {datasets.__version__}')
+print(f'sentencepiece version: {spm.__version__}')
+print(f'torch version: {torch.__version__}')
+print("\n")
 
 class BaseConfig:
     """ base Encoder Decoder config """
@@ -13,6 +22,9 @@ class NMTConfig(BaseConfig):
     data_dir = 'vi_en/data'
     src_lang = 'vi'
     tgt_lang = 'en'
+    # data_dir = 'en_vi/data'
+    # src_lang = 'en'
+    # tgt_lang = 'vi'
 
     # Tokenizer
     sp_dir = data_dir + '/sp'
@@ -45,3 +57,5 @@ class NMTConfig(BaseConfig):
 cfg = NMTConfig()
 trainer = Trainer(cfg, is_train=False, load_ckpt=False)
 trainer.inference('Tôi yêu bạn.')
+# trainer.inference('I love you.')
+
