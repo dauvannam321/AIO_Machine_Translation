@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <link rel="stylesheet" href="static\style.css">
+
+</head>
+<body>
+
+    <div id="container">
+        <table>
+            <tbody>
+                {% if switch_button %}
+                    <form method="post" action="/">
+                        <tr>
+                            <td style="text-align: center;">
+                                <label>English</label>
+                            </td>
+                            <td> </td>
+                            <td style="text-align: center;">
+                                <label>Vietnamese</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea id="textInput" name="text_input" placeholder="Enter text (max 150 characters)" maxlength="150" rows="15"></textarea>
+                            </td>
+                            <td>
+                                <div>
+                                    <button id="submitButton" name="translate_button">Translate</button>
+                                </div>
+                                <div>
+                                    <button id="submitButton" name="switch_button">Switch</button>
+                                </div>
+                            </td>
+                            <td>
+                                {% if input_text %}
+                                    <textarea readonly id="textInput"  placeholder="Translation" maxlength="150" rows="15">{{ input_text }}</textarea>
+                                {% else %}
+                                    <textarea readonly id="textInput"  placeholder="Translation" maxlength="150" rows="15"></textarea>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </form>
+                {% else %}
+                    <form method="post" action="/">
+                        <tr>
+                            <td style="text-align: center;">
+                                <label>Vietnamese</label>
+                            </td>
+                            <td> </td>
+                            <td style="text-align: center;">
+                                <label>English</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea id="textInput" name="text_input" placeholder="Enter text (max 150 characters)" maxlength="150" rows="15"></textarea>
+                            </td>
+                            <td>
+                                <div>
+                                    <button id="submitButton" name="translate_button">Translate</button>
+                                </div>
+                                <div>
+                                    <button id="submitButton" name="switch_button">Switch</button>
+                                </div>
+                            </td>
+                            <td>
+                                {% if input_text %}
+                                    <textarea readonly id="textInput"  placeholder="Translation" maxlength="150" rows="15">{{ input_text }}</textarea>
+                                {% else %}
+                                    <textarea readonly id="textInput"  placeholder="Translation" maxlength="150" rows="15"></textarea>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </form>
+                {% endif %}
+
+            </tbody>
+        </table>
+    </div>
+
+    
+
+</body>
+</html>
