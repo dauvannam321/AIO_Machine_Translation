@@ -22,9 +22,8 @@ Dự án Dịch Máy sử dụng mô hình Transformer, một kiến trúc mạn
    ```bash
    https://github.com/dauvannam321/AIO_Machine_Translation.git
 
-2. Tải pretrained các model sau và giải nén chúng trong cùng thư mục CS221.O11:
-   - [vi_en](https://drive.google.com/drive/folders/1eevQU8FX1a7Zdu1bOgqryP7gELpqdTu3?usp=sharing)
-   - [en_vi](https://drive.google.com/drive/folders/14gIGjSUi8FfpGsB0ih5lUR1bDSopDYoP?usp=sharing)
+2. Tải pretrained model:
+   - [checkpoint](https://www.kaggle.com/datasets/namuvn/vi-en-ckpt)
    
 3. Cài đặt các dependencies:
 
